@@ -58,7 +58,7 @@ let count = 1
       <h2>Savings History</h2>
       <table className="Infotable" >
             <thead>
-                <tr>
+                <tr id="Infotable">
                     <th>S/N</th>
                     <th>Category</th>
                     <th>Date</th>
