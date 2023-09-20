@@ -1,20 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Form from '../components/Form'
 
 
 function Safe() {
 
-  const { date, description, category, amount} = transaction;
+  const [items, setItems] = useState([]);
+
+
+  function handleAddItem(newItems){
+    console.log("in Savings history:", newItems)
+    setItems({...items, newItems })
+  }
+
 
   return (
-    (
-        <tr className="transData">
-            <td>{count}</td>
-            <td>{date}</td>
-            <td>{description}</td>
-            <td>{category}</td>
-            <td>{amount}</td>
-        </tr>
-  )
+          <div id = "saving">
+            <h1>INITIATE SAVINGS</h1>
+            
+            <Form  onAddItem={handleAddItem} />
+ 
+          </div>
   )
 }
 
