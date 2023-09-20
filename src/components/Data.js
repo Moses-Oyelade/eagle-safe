@@ -2,15 +2,15 @@ import React from 'react'
 
 function Data({ count, transaction }) {
 
-    const { date, description, category, amount} = transaction
+    const {  category, date, description, amount } = transaction
 
 
   return (
     <tr className="transData">
         <td>{count}</td>
+        <td>{category}</td>
         <td>{date}</td>
         <td>{description}</td>
-        <td>{category}</td>
         <td>{amount}</td>
     </tr>
 )

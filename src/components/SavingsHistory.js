@@ -1,11 +1,14 @@
 import React, { useEffect, useState} from 'react'
 import Data from './Data';
-import Form from '../components/Form'
+// import Form from '../components/Form'
+import FilterTransaction from './FilterTransaction';
+// import AccountBalance from './AccountBalance';
 
 const SavingsHistory = ( ) => {
 
   // const [selectedCategory, setSelectedCategory] = useState("All");
-  const [items, setItems] = useState([]);
+  const [transactions, setTransactions] = useState([]);
+  const [newChange, setNewChange] = useState(false)
 
   
 let count = 1
@@ -13,25 +16,32 @@ let count = 1
   useEffect(() => {
     fetch("http://localhost:3000/transactions")
     .then((res) => res.json())
-    .then((transactions) => setItems(transactions));
+    .then((items) => setTransactions(items));
 
-  }, []);
-
-
-  function handleAddItem(newItems){
-    console.log("in Savings history:", newItems)
-    setItems({...items, newItems })
-  }
+  }, [newChange]);
 
 
+  
+
+
+  // function handleUpatedTransactions(updatedBalance){
+  //   console.log("in balance:", updatedBalance);
+  //   const upDatedItems = items.map(item => item.amount).reduce((prev, next) => prev + next);
+  //   // return upDatedItem;
+  //   setItems(upDatedItems)
+  // };
+  
   function handleUpatedTransactions(updatedBalance){
     console.log("in balance:", updatedBalance);
-    const upDatedItems = items.map(item => item.amount).reduce((prev, next) => prev + next);
+    const upDatedItems = transactions.map(transaction => {
+      if(transaction.amount === updatedBalance.amount){
+        return updatedBalance;
+      }else{
+        return transaction;
+      }}).reduce((prev, next) => prev + next);
     // return upDatedItem;
-    setItems(upDatedItems)
+    setTransactions(upDatedItems)
   };
-  
-    
 
   
   
@@ -39,25 +49,29 @@ let count = 1
 
   return (
     <>
-    <Form  onAddItem={handleAddItem} />
+    <div className="balance">
+      {/* <AccountBalance /> */}
+      <FilterTransaction  newChange={newChange}
+      setNewChange={setNewChange} />
+    </div>
     <div className="history">
       <h2>Savings History</h2>
       <table className="Infotable" >
             <thead>
                 <tr>
                     <th>S/N</th>
+                    <th>Category</th>
                     <th>Date</th>
                     <th>Description</th>
-                    <th>Category</th>
                     <th>Amount</th>
                 </tr>
             </thead>
             <tbody>
               
-                {items.map((item) => (
-                <Data key={item.id}
+                {transactions.map((transaction) => (
+                <Data key={transaction.id}
                         count={count++}
-                        item={item}
+                        transaction={transaction}
                     onUpdatedItem={handleUpatedTransactions}
                     
                     />

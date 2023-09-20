@@ -102,9 +102,7 @@ header h2 {
   padding: 1rem 0;
 }
 
-header button {
-  background: var(--yellow);
-}
+
 
 .Filter {
   display: flex;
@@ -119,6 +117,7 @@ header button {
 }
 
 #category {
+  align-self: center;
   width: 140px;
   color: ivory;
   border-radius: 6px;
@@ -146,9 +145,6 @@ header button {
   background: var(--background-light);
 }
 
-.Items li.in-cart span {
-  text-decoration: line-through;
-}
 
 .Items button.add {
   color: white;
@@ -171,7 +167,15 @@ header button {
   font-size: 0.8em;
 }
 
-/* .NewItem, */
+.history{
+  background-color: rgb(245, 239, 231);
+  border-radius: 6px;
+  padding-top: 0.5em;
+}
+
+
+
+.NewItem,
 .NewItem ul {
   border-bottom: 0 solid var(--background-light);
   border-top: 0 solid var(--background-light);
@@ -184,6 +188,7 @@ header button {
 }
 
 .NewItem button {
+    align-items: center;
   color: white;
   
   background-color: rgb(3, 88, 48);

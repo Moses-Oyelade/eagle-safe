@@ -2,24 +2,12 @@ import React, {useState} from 'react'
 
 function Form({onAddItem}) {
   const [category, setCategory] = useState("Daily");
-  // const [errors, setErrors] = useState([]);
+  const [errors, setErrors] = useState([]);
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
 
-  // const [formData, setFormData] = useState({
-  //   date: " ",
-  //   description: " ",
-  //   amount: " ",
-  //   category: "Daily",
-  // });
-
-    
-      // setFormData({
-      //   ...formData, 
-      //   [e.target.name]: e.target.value,
-      // })
-    
+  console.log(onAddItem)
 
 
   function handleSubmit(e) {
@@ -31,11 +19,13 @@ function Form({onAddItem}) {
       category: category,
     }
 
-    // if(formData.length !== 0) {
+    if(itemData !== 0) {
      
     // setItems([...items, newItem]);
-    // setFormData("");
-  
+    // setItemData("");
+    setDate("")
+    setDescription("");
+    setAmount("")
       console.log(itemData);
 
     fetch("http://localhost:3000/transactions", {
@@ -50,11 +40,11 @@ function Form({onAddItem}) {
       
       
       
-      // setFormData(newItem));
-  //   setErrors([]);
-  // } else {
-  //   setErrors(["Enter all input!"])
-  // }
+      
+    setErrors([]);
+  } else {
+    setErrors(["Enter all input!"])
+  }
 
   };
 
@@ -62,7 +52,7 @@ function Form({onAddItem}) {
   return (
     <div>
     <form  className="NewItem" onSubmit={handleSubmit}> 
-      <ul>
+      <ul id="list">
          <li>
             <label>
               Category:
@@ -75,9 +65,9 @@ function Form({onAddItem}) {
                 <option value="Monthly">Monthly Savings</option>
               </select>
             </label>
-          </li>
+          
 
-          <li><label>Date:
+            <label>Date:
               <input type="text"
                 date ="date"
                 placeholder='yyyy-mm-dd'
@@ -111,13 +101,13 @@ function Form({onAddItem}) {
         
         <button type="submit"> Send </button>
     </form>
-    {/* {errors.length > 0
+    {errors.length > 0
       ? errors.map((error, index) => (
         <p key={index} style={{color: "red" }}>
           {error}
         </p>
         ))
-      : null} */}
+      : null}
     </div>
   )
 }

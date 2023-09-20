@@ -9,23 +9,9 @@ function Details() {
     <>
     <div>
       <p>This is Details</p>
-         <table className="InfoTable" >
-                <thead>
-                    <tr>
-                        <th>S/N</th>
-                        <th>Date</th>
-                        <th>Description</th>
-                        <th>Category</th>
-                        <th>Amount</th>
-                    </tr>
-                </thead>
-            
-            </table>
-
-         </div>
-    
-     
-       <SavingsHistory/>
+      <SavingsHistory/>
+               
+    </div>
      </>
      
         )
