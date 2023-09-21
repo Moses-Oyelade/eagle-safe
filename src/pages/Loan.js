@@ -49,11 +49,11 @@ function Loan() {
       const dataArray = [...submittedData, formData];
       
       setSubmittedData(dataArray);
-      // setFirstName("");
-      // setLastName("");
+      setFirstName("");
+      setLastName("");
       setBvn("");
       setDescription("");
-      setAmount(0);
+      setAmount("");
       setErrors([]);
       
     } else {
