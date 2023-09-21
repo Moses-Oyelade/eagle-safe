@@ -19,14 +19,15 @@ function Form({onAddItem}) {
       category: category,
     }
 
-    if(itemData !== 0) {
+    if(itemData.amount !== 0) {
      
     // setItems([...items, newItem]);
     // setItemData("");
     setDate("")
     setDescription("");
     setAmount("")
-      console.log(itemData);
+    setCategory("daily")
+      console.log(itemData.amount);
 
     fetch("http://localhost:3000/transactions", {
       method: "POST",
@@ -101,7 +102,7 @@ function Form({onAddItem}) {
         
         <button type="submit"> Send </button>
     </form>
-    {errors.length > 0
+    {errors.length !== 0
       ? errors.map((error, index) => (
         <p key={index} style={{color: "red" }}>
           {error}
