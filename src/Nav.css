@@ -1,16 +1,20 @@
-.navbar{
-    background-color: rgb(10, 65, 62);
+.nav{
+    /* background-color: rgb(10, 65, 62); */
     padding: 0, 5px;
-    width: 50%;
+    width: 2rem;
     height: 60px;
     
-    
-
   }
 
- 
+  @media (min-width: 400px) {
+   .nav {
+      flex-direction: row;
+    }
+
+  }
   
   ul {
+    min-width: 0.2em;
     padding: 2, 5px;
     list-style: none;
     display: flex;
@@ -32,11 +36,11 @@
 
   
   nav a {
-    display: inline-block;
+    display: block;
     background-color: aqua;
     box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.2);
     padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
+    margin: 0 0.2rem;
     text-decoration: none;
     font-size: 1.2em;
     color: rgb(15, 46, 8);
