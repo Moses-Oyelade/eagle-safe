@@ -14,7 +14,7 @@ function NavBar() {
       <nav className="nav">
         <ul className="navlink">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink exact to="/">Home</NavLink>
           </li>
           <li>
             <NavLink to="/details">Details</NavLink>
