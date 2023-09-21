@@ -12,7 +12,7 @@ function About() {
   return (
     <div id="about">
         <h2>About Us</h2>
-        <article>
+        <article >
         <img src={Human4} className="Human4" alt="smiling-woman" />
         
         <h5>This is Eagle Kolo Services...
@@ -26,6 +26,7 @@ function About() {
           <br/>Kindly refer to the contact link below for more information.
         </h5>
         </article>
+        
         
         <img src={Eagle1} className="Eagle1" alt="eagle-Wings" />
         <ContactUs />
