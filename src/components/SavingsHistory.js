@@ -24,12 +24,7 @@ let count = 1
   
 
 
-  // function handleUpatedTransactions(updatedBalance){
-  //   console.log("in balance:", updatedBalance);
-  //   const upDatedItems = items.map(item => item.amount).reduce((prev, next) => prev + next);
-  //   // return upDatedItem;
-  //   setItems(upDatedItems)
-  // };
+
   
   function handleUpatedTransactions(updatedBalance){
     console.log("in balance:", updatedBalance);
@@ -41,6 +36,7 @@ let count = 1
       }}).reduce((prev, next) => prev + next);
     // return upDatedItem;
     setTransactions(upDatedItems)
+    console.log("here at history")
   };
 
   
@@ -52,7 +48,9 @@ let count = 1
     <div className="balance">
       {/* <AccountBalance /> */}
       <FilterTransaction  newChange={newChange}
-      setNewChange={setNewChange} />
+      setNewChange={setNewChange}
+      setTransactions={setTransactions} 
+      />
     </div>
     <div className="history">
       <h2>Savings History</h2>
