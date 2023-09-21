@@ -57,7 +57,7 @@ input {
   border: none;
   margin-bottom: 10px;
   padding: 0.5rem;
-  width:400px;
+  max-width:400px;
   border-radius: 4px;
   font-size: 1rem;
   background: var(--background-light);
@@ -107,8 +107,8 @@ article {
   
   padding:20px;
   margin: 2px 0;
-  width: 500px;
-  height: 400px;
+  max-width:500px;
+  max-height: 300px;
   border: dashed 1px black;
 
 }
@@ -203,6 +203,8 @@ header h2 {
   background-color: rgb(245, 239, 231);
   border-radius: 6px;
   padding-top: 0.5em;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
 }
 
 
@@ -293,18 +295,18 @@ p {
 }
 
 #about img {
-  max-height: 50px;
+  max-height: 40px;
   margin-top: 10px;
 }
 
 #about a {
   display: block;
 }
-
+/* 
 #projects {
   background-color: cornsilk;
   min-height: 400px;
-}
+} */
 
 #list{
   display: flex;
@@ -320,9 +322,10 @@ p {
   margin: 1rem;
 }
 
-.technologies span {
-  background-color: lightblue;
+#filter-search {
+  /* background-color: lightblue; */
   margin: 0.25rem;
+  width: 15rem;
   padding: 0.5rem;
   border-radius: 4px;
   display: inline-block;
