@@ -28,7 +28,7 @@ const FilterTransaction = ({ setTransactions, category }) => {
 
     
     },[search, setTransactions])
-    console.log(category)
+  
 
   return (
     <div className="new-transaction">
