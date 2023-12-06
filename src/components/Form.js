@@ -15,11 +15,11 @@ function Form({onAddItem}) {
     const itemData = {
       date: date,
       description: description,
-      amount: amount,
+      amount: parseInt(amount),
       category: category,
     }
 
-    if(itemData.amount !== 0) {
+    if(amount > 0) {
      
     // setItems([...items, newItem]);
     // setItemData("");
@@ -90,7 +90,7 @@ function Form({onAddItem}) {
 
           <li>
               <label>Amount:
-                 <input type="number" 
+                 <input type='number'
                   placeholder="Amount"
                   amount="amount"
                   value={amount}
@@ -102,7 +102,7 @@ function Form({onAddItem}) {
         
         <button type="submit"> Send </button>
     </form>
-    {errors.length !== 0
+    {errors.length > 0
       ? errors.map((error, index) => (
         <p key={index} style={{color: "red" }}>
           {error}

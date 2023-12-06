@@ -32,7 +32,7 @@ function App() {
             <Route path= "/loan">
                 <Loan/>
             </Route>
-            <Route path= "/">
+            <Route exact path= "/">
                 <Home/>
             </Route>
             </Switch>

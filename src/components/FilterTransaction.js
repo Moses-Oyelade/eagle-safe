@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react'
 
-const FilterTransaction = ({ setTransactions, category }) => {
+const FilterTransaction = ({ setTransactions }) => {
 
     const [search, setSearch] = useState("")
 

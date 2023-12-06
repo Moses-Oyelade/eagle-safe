@@ -6,7 +6,6 @@ import FilterTransaction from './FilterTransaction';
 
 const SavingsHistory = ( ) => {
 
-  // const [selectedCategory, setSelectedCategory] = useState("All");
   const [transactions, setTransactions] = useState([]);
   const [newChange, setNewChange] = useState(false)
 
@@ -21,23 +20,19 @@ let count = 1
   }, [newChange]);
 
 
-  
+  // function HandleBalanceClick() {
 
+  const totalBal = transactions.map(transaction => transaction.amount).reduce((accumulator, current) => accumulator + current, 0);
+ console.log(`Balance ${totalBal}`)
+ 
+  // }
 
+//  let sum = 0;
 
-  
-  function handleUpatedTransactions(updatedBalance){
-    console.log("in balance:", updatedBalance);
-    const upDatedItems = transactions.map(transaction => {
-      if(transaction.amount === updatedBalance.amount){
-        return updatedBalance;
-      }else{
-        return transaction;
-      }}).reduce((prev, next) => prev + next);
-    // return upDatedItem;
-    setTransactions(upDatedItems)
-    console.log("here at history")
-  };
+//  transactions.forEach(transaction => {
+//   sum += transaction.amount;
+//  })
+
 
   
   
@@ -46,7 +41,17 @@ let count = 1
   return (
     <>
     <div className="balance">
-      {/* <AccountBalance /> */}
+      <div className="acount-bal">
+      <h4>SAVINGS ACCOUNT</h4>
+      <h4>0027856679</h4>
+      <button id="balance" 
+      >Account Balance
+      </button>
+      <p>$ {totalBal}</p>
+      {/* <p>{sum}</p> */}
+
+      </div>
+
       <FilterTransaction  newChange={newChange}
       setNewChange={setNewChange}
       setTransactions={setTransactions} 
@@ -70,7 +75,7 @@ let count = 1
                 <Data key={transaction.id}
                         count={count++}
                         transaction={transaction}
-                    onUpdatedItem={handleUpatedTransactions}
+                    // onUpdatedItem={handleUpatedTransactions}
                     
                     />
                 ))}
