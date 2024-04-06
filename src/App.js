@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Details from "./pages/Details";
 import About from "./pages/About";
 import Save from "./pages/Save";
@@ -15,9 +15,6 @@ function App() {
   return (
     <>
      <div className="App">
-      
-     
-       <BrowserRouter>
          <NavBar />
            <Switch>
             <Route path= "/details">
@@ -36,8 +33,10 @@ function App() {
                 <Home/>
             </Route>
             </Switch>
-            <Footer/>
-        </BrowserRouter>
+            <footer>
+              <Footer/>
+            </footer>
+            
     </div> 
     </>
   );

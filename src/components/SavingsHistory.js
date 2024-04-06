@@ -7,10 +7,12 @@ import FilterTransaction from './FilterTransaction';
 const SavingsHistory = ( ) => {
 
   const [transactions, setTransactions] = useState([]);
-  const [newChange, setNewChange] = useState(false)
+  const [newChange, setNewChange] = useState(false);
+  const [isOn, setIsOn] = useState(false);
+
 
   
-let count = 1
+  let count = 1;
 
   useEffect(() => {
     fetch("http://localhost:3000/transactions")
@@ -20,24 +22,17 @@ let count = 1
   }, [newChange]);
 
 
-  // function HandleBalanceClick() {
+  function handleBalanceClick() {
+    setIsOn((isOn) => !isOn)
+  };
 
-  const totalBal = transactions.map(transaction => transaction.amount).reduce((accumulator, current) => accumulator + current, 0);
- console.log(`Balance ${totalBal}`)
+
+const totalBal = transactions.map(transaction => (transaction.amount)).reduce((accumulator, current) => accumulator + current, 0);
+console.log(`Balance ${totalBal}`)
+
+const accountBal = isOn ? "account-hide" : "account-show ";
+
  
-  // }
-
-//  let sum = 0;
-
-//  transactions.forEach(transaction => {
-//   sum += transaction.amount;
-//  })
-
-
-  
-  
-
-
   return (
     <>
     <div className="balance">
@@ -45,10 +40,10 @@ let count = 1
       <h4>SAVINGS ACCOUNT</h4>
       <h4>0027856679</h4>
       <button id="balance" 
-      >Account Balance
+        onClick={handleBalanceClick}
+      >{isOn ? "Show Bal." : "Hide Bal."}
       </button>
-      <p>$ {totalBal}</p>
-      {/* <p>{sum}</p> */}
+      <p className={accountBal}>$ {totalBal}</p>
 
       </div>
 
@@ -74,9 +69,7 @@ let count = 1
                 {transactions.map((transaction) => (
                 <Data key={transaction.id}
                         count={count++}
-                        transaction={transaction}
-                    // onUpdatedItem={handleUpatedTransactions}
-                    
+                        transaction={transaction}            
                     />
                 ))}
             </tbody>

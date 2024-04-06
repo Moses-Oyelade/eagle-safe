@@ -1,17 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from "react-router-dom";
 // import "./Nav.css"
 
 
 
+
 function NavBar() {
+const [isToggle, setIsToggle] = useState(false);
+
+function handleClick(){
+    setIsToggle((isToggle) => !isToggle);
+
+}
+
+const nav = isToggle ? "nav-show" : "nav";
+const hamburger = isToggle ? 'hamburger' : "hamburger-active" 
+
+// const lines = <div class= {hamburger}
+//                   onClick={handleClick}
+//                   >
+//                   <span class="bar"></span>
+//                   <span class="bar"></span>
+//                   <span class="bar"></span>
+//               </div>;
 
 
 
 
   return (
     <div id="navbar">
-      <nav className="nav">
+      <div class= {hamburger}
+                  onClick={handleClick}
+                  >
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+              </div>
+      <nav className={nav}>
         <ul className="navlink">
           <li>
             <NavLink exact to="/">Home</NavLink>

@@ -60,18 +60,9 @@
 
 
 .nav{
-  /* background-color: rgb(10, 65, 62); */
   padding: 0, 5px;
   width: 2rem;
   height: 60px;
-  
-}
-
-@media (min-width: 400px) {
- .nav {
-    flex-direction: row;
-  }
-
 }
 
 ul {
@@ -94,8 +85,6 @@ ul {
   color: red;
 }
 
-
-
 nav a {
   display: block;
   background-color: aqua;
@@ -112,3 +101,76 @@ nav a:hover {
   background-color: rgb(3, 192, 176);
 }
 
+.account-hide {
+  display:none;
+}
+
+.account-show {
+  display: block;
+  background-color: cornsilk;
+  color:black;
+}
+
+@media (max-width: 700px) {
+    .hamburger{
+      display: block;
+      color: blueviolet;
+      z-index: 2;
+        
+    }
+    .hamburger-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+   .nav-show{
+     position: fixed;
+     left: -100%;
+     top: 50px;
+     gap: 0;
+     flex-direction: column;
+     background-color: rgb(3, 54, 54);
+     width: 100%;
+     height: auto;
+     text-align: center;
+     transition: 0.3s;
+     z-index: 1;
+ }
+
+ul {
+  min-width: 0.2em;
+  padding: 2, 5px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px ;
+  margin-bottom: 5px;
+  margin-left: 50px;
+  justify-content: left;
+}
+.navbar{
+  display: flex;
+  flex-direction: column;
+}
+
+ .App {
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    max-width: 700px;
+    text-align: center;
+    min-height: 50vh;
+    /* background-color: #91d0d4; */
+    background-color: #0a9ca7;
+    box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.2);
+    border-radius: 10px;
+  }
+
+  .App-logo {
+    height: 25vmin;
+    pointer-events: none;
+  }
+ }

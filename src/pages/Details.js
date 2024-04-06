@@ -1,6 +1,6 @@
 import React from 'react'
 import SavingsHistory from "../components/SavingsHistory";
-// // import FilterTransaction from '../components/FilterTransaction';
+// import FilterTransaction from '../components/FilterTransaction';
 
 
 function Details() {
@@ -12,7 +12,7 @@ function Details() {
       <SavingsHistory/>
                
     </div>
-     </>
+     <></></>
      
         )
    

@@ -59,7 +59,7 @@
     {
       "date": "2023-05-12",
       "description": "Land Purchase",
-      "amount": "20000",
+      "amount": 20000,
       "category": "Weekly",
       "id": 9
     },
@@ -139,6 +139,62 @@
       "amount": 20000,
       "category": "Weekly",
       "id": 29
+    },
+    {
+      "date": "2023-11-26",
+      "description": "Cruise",
+      "amount": 23000,
+      "category": "Weekly",
+      "id": 30
+    },
+    {
+      "date": "2023-11-26",
+      "description": "Transport",
+      "amount": 29000,
+      "category": "Monthly",
+      "id": 31
+    },
+    {
+      "date": "2023-11-26",
+      "description": "Health care",
+      "amount": 29000,
+      "category": "Weekly",
+      "id": 32
+    },
+    {
+      "date": "2023-11-26",
+      "description": "Housing",
+      "amount": 50000,
+      "category": "Monthly",
+      "id": 33
+    },
+    {
+      "date": "2023-11-26",
+      "description": "Foodity",
+      "amount": 40000,
+      "category": "Monthly",
+      "id": 34
+    },
+    {
+      "date": "2023-12-05",
+      "description": "Shopping",
+      "amount": 58000,
+      "category": "Weekly",
+      "id": 35
+    },
+    {
+      "date": "2023-12-22",
+      "description": "Wedding",
+      "amount": 249999,
+      "category": "Daily",
+      "id": 36
+    },
+    {
+      "date": "2024-01-04",
+      "description": "School fees",
+      "amount": 100000,
+      "category": "Monthly",
+      "id": 37
     }
   ]
 }
