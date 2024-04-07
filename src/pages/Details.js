@@ -7,12 +7,12 @@ function Details() {
 
   return (
     <>
-    <div>
-      <p>This is Details</p>
-      <SavingsHistory/>
-               
-    </div>
-     <></></>
+      <div>
+        <h2>ACCOUNT DETAILS</h2>
+        <SavingsHistory/>
+                
+      </div>
+    </>
      
         )
    

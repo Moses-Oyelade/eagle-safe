@@ -33,7 +33,6 @@ function Loan() {
   }
 
   function handleSubmit(event) {
-    alert(`You Initiated a Loan request!`)
     event.preventDefault();
     // first name is required
     if (firstName.length > 0) {
@@ -62,7 +61,7 @@ function Loan() {
   }
   
   const listOfSubmissions = submittedData.map((data, index) => {
-    
+    alert(`You Initiated a Loan request!`)
 
     return (
             
@@ -71,12 +70,12 @@ function Loan() {
         Hi, {data.firstName} {data.lastName}, You have submitted
       </h5>
         <table id = "table-loan" style ={{borderBottom:"3px dashed" , marginBottom:"4px"}}>
-          <tbody>
-          <tr style={{background: "rgb(216, 212, 212)" , color: "green"}}>Firstname:  {data.firstName}</tr>
-          <tr style={{background: "rgb(216, 212, 212)" , color: "green"}}>Lastname:  {data.lastName}</tr>
-          <tr style={{background: "rgb(216, 212, 212)" , color: "green"}}>BVN:   {data.bvn}</tr>
-          <tr style={{background: "rgb(216, 212, 212)" , color: "green"}}>Desc:  {data.description}</tr>
-          <tr style={{background: "rgb(216, 212, 212)" , color: "green"}}>Amount:   {data.amount}</tr>
+          <tbody style={{background: "rgb(216, 212, 212)"}}>
+          <tr style={{color: "green", textAlign: "justify" }}>&nbsp;&nbsp;Firstname:&nbsp;{data.firstName}</tr>
+          <tr style={{color: "green", textAlign: "justify" }}>&nbsp;&nbsp;Lastname: &nbsp;{data.lastName}</tr>
+          <tr style={{color: "green", textAlign: "justify" }}>&nbsp;&nbsp;BVN: &nbsp;&nbsp;{data.bvn}</tr>
+          <tr style={{color: "green", textAlign: "justify" }}>&nbsp;&nbsp;Desc:&nbsp;&nbsp;{data.description}</tr>
+          <tr style={{color: "green", textAlign: "justify" }}>&nbsp;&nbsp;Amount:   &nbsp;{data.amount}</tr>
           </tbody>
         </table>
       </div>
@@ -85,6 +84,7 @@ function Loan() {
  
   return (
     <div  id='loan'>
+      <h2>LOAN REQUEST</h2>
       <p>Please Fill Loan Form</p>
       <form id="loan-form" onSubmit={handleSubmit}>
         

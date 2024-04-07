@@ -21,8 +21,6 @@ function Form({onAddItem}) {
 
     if(amount > 0) {
      
-    // setItems([...items, newItem]);
-    // setItemData("");
     setDate("")
     setDescription("");
     setAmount("")
@@ -38,8 +36,6 @@ function Form({onAddItem}) {
     })
       .then((res) => res.json())
       .then((newItem) => onAddItem(newItem))
-      
-      
       
       
     setErrors([]);

@@ -109,6 +109,7 @@ nav a:hover {
   display: block;
   background-color: cornsilk;
   color:black;
+  margin: 0.5rem 7rem;
 }
 
 /* responsive display and media query */

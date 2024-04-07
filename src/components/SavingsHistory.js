@@ -43,7 +43,7 @@ const accountBal = isOn ? "account-hide" : "account-show ";
         onClick={handleBalanceClick}
       >{isOn ? "Show Bal." : "Hide Bal."}
       </button>
-      <p className={accountBal}>$ {totalBal}</p>
+      <h3 className={accountBal}>$ {totalBal}</h3>
 
       </div>
 
