@@ -16,7 +16,7 @@ function ContactUs() {
 
       return (
         <div id="contact">
-            CONTACT US
+            <h5>CONTACT US</h5>
             <a href={links.github}>github</a>
             <a href={links.linkedin}>linkedin</a>
             <a href={links.facebook}>facebook</a>

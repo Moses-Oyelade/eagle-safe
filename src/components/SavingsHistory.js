@@ -53,7 +53,7 @@ const accountBal = isOn ? "account-hide" : "account-show ";
       />
     </div>
     <div className="history">
-      <h2>Savings History</h2>
+      <h3>Savings History</h3>
       <table className="Infotable" >
             <thead>
                 <tr id="Infotable">

@@ -73,7 +73,7 @@ input {
 
 article img {
   height: auto;
-  width: 70px;
+  width: 5rem;
   float: left;
   margin-right: 10px;
 }
@@ -82,7 +82,7 @@ article {
   padding:10px;
   margin: 2px 0;
   max-width:500px;
-  max-height: 300px;
+  max-height: auto;
   border: dashed 1px black;
 
 }
@@ -193,14 +193,12 @@ h4,
 h5,
 h6 {
   font-family: "Playfair Display", serif;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
 }
 
 p {
   margin-bottom: 1em;
 }
-
-
 
 #home {
   height: 60vh;
@@ -258,15 +256,7 @@ p {
   display: inline-block;
 }
 
-@media (min-width: 700px) {
-  #project-list {
-    flex-direction: column;
-  }
 
-  .project-item {
-    width: 50%;
-  }
-}
 .h {
   text-align: center;
   min-height: 100vh;
