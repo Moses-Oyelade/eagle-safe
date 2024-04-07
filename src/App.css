@@ -111,12 +111,36 @@ nav a:hover {
   color:black;
 }
 
+/* responsive display and media query */
+.hamburger{
+  display: none;
+  cursor:pointer;
+  margin-right: 90%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.bar{
+  display:none;
+  width:50px;
+  height:5px;
+  margin:4px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(255, 255, 255);
+}
+
 @media (max-width: 700px) {
     .hamburger{
       display: block;
-      color: blueviolet;
-      z-index: 2;
-        
+    }
+    .hamburger-active{
+      position: fixed;
+      background-color: rgb(3, 54, 54);
+      width: 30%;
+      padding: 1rem;
+      height: auto;
+      z-index: 1;
     }
     .hamburger-active .bar:nth-child(2){
         opacity: 0;
@@ -127,35 +151,46 @@ nav a:hover {
     .hamburger-active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .bar{
+      display:block;
+      width:50px;
+      height:5px;
+      margin:4px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: rgb(255, 255, 255);
+    }
    .nav-show{
      position: fixed;
-     left: -100%;
-     top: 50px;
+     top: 110px;
      gap: 0;
-     flex-direction: column;
+     flex-direction: row;
      background-color: rgb(3, 54, 54);
-     width: 100%;
+     width: 30%;
      height: auto;
      text-align: center;
      transition: 0.3s;
      z-index: 1;
- }
+    }
+    .nav{
+      display: none;
+    }
 
-ul {
-  min-width: 0.2em;
-  padding: 2, 5px;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  margin-top: 5px ;
-  margin-bottom: 5px;
-  margin-left: 50px;
-  justify-content: left;
-}
-.navbar{
-  display: flex;
-  flex-direction: column;
-}
+    ul {
+      min-width: 0.2em;
+      padding: 2, 5px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px ;
+      margin-bottom: 5px;
+      justify-content: left;
+    }
+    .navbar{
+      display: flex;
+      flex-direction: column;
+    }
 
  .App {
     margin: 2rem auto;

@@ -13,8 +13,8 @@ function handleClick(){
 
 }
 
-const nav = isToggle ? "nav-show" : "nav";
-const hamburger = isToggle ? 'hamburger' : "hamburger-active" 
+const nav = isToggle ? "nav-show":  "nav";
+const hamburger = isToggle ? "hamburger-active" :'hamburger'; 
 
 // const lines = <div class= {hamburger}
 //                   onClick={handleClick}
@@ -36,7 +36,9 @@ const hamburger = isToggle ? 'hamburger' : "hamburger-active"
                   <span class="bar"></span>
                   <span class="bar"></span>
               </div>
-      <nav className={nav}>
+      <nav className={nav}
+        onClick={handleClick}
+      >
         <ul className="navlink">
           <li>
             <NavLink exact to="/">Home</NavLink>
