@@ -15,7 +15,7 @@ function Safe() {
 
   return (
           <div id = "saving">
-            <h1>INITIATE SAVINGS</h1>
+            <h2>INITIATE SAVINGS</h2>
             
             <Form  onAddItem={handleAddItem} />
  

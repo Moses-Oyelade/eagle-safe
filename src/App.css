@@ -131,7 +131,7 @@ nav a:hover {
   background-color: rgb(255, 255, 255);
 }
 
-@media (max-width: 700px) {
+@media (min-width: 481px) and (max-width: 700px) {
     .hamburger{
       display: block;
     }
@@ -225,7 +225,6 @@ nav a:hover {
   
   }
   #about {
-    /* height: 50rem; */
     min-height: 500px;
     max-height: auto;
     background-color: cornsilk;
@@ -244,10 +243,138 @@ nav a:hover {
   }
 
   .account-show {
-    display: block;
+    position: relative;
     background-color: cornsilk;
     color:black;
-    margin: 0.5rem 6rem;
-    /* width:8rem; */
   }
+ }
+
+ @media (max-width: 480px){
+
+  .hamburger{
+    display: block;
+  }
+  .hamburger-active{
+    position: fixed;
+    background-color: rgb(3, 54, 54);
+    width: 30%;
+    padding: 1rem;
+    height: auto;
+    z-index: 1;
+  }
+  .hamburger-active .bar:nth-child(2){
+      opacity: 0;
+  }
+  .hamburger-active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger-active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .bar{
+    display:block;
+    width:40px;
+    height:5px;
+    margin:4px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+  }
+ .nav-show{
+   position: fixed;
+   top: 5rem;
+   gap: 0;
+   flex-direction: row;
+   background-color: rgb(3, 54, 54);
+   width: 30%;
+   height: auto;
+   text-align: center;
+   transition: 0.3s;
+   z-index: 1;
+  }
+  .nav{
+    display: none;
+  }
+
+  ul {
+    min-width: 0.2em;
+    padding: 2px, 5px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px ;
+    margin-bottom: 5px;
+    justify-content: left;
+  }
+  .navbar{
+    display: flex;
+    flex-direction: column;
+  }
+  .App {
+    margin: 1rem auto;
+    padding: 0.5rem 0.5rem;
+    max-width: 700px;
+    text-align: center;
+    min-height: 50vh;
+    background-color: #0a9ca7;
+    box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.2);
+    border-radius: 10px;
+  }
+
+  .Home-logo {
+    height: 50vmin;
+    pointer-events: none;
+  }
+
+  article img {
+    height: auto;
+    width: 80px;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  article {
+    padding:5px;
+    margin-bottom: 1rem;
+    max-width:600px;
+    max-height: auto;
+    border: dashed 1px black;
+  
+  }
+  #about {
+    width: auto; 
+    min-height: 500px;
+    max-height: auto;
+    background-color: cornsilk;
+  }
+  
+  #home,
+  #about,
+  #savings
+  #loan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+    .Eagle1{
+      display:none;
+    }
+
+    .account-bal{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+  .account-show {
+    background-color: cornsilk;
+    color:black;
+    width: max-content;
+  }
+  
  }

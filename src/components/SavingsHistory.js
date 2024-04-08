@@ -36,16 +36,15 @@ const accountBal = isOn ? "account-hide" : "account-show ";
   return (
     <>
     <div className="balance">
-      <div className="acount-bal">
-      <h4>SAVINGS ACCOUNT</h4>
-      <h4>0027856679</h4>
-      <button id="balance" 
-        onClick={handleBalanceClick}
-      >{isOn ? "Show Bal." : "Hide Bal."}
-      </button>
-      <h3 className={accountBal}>$ {totalBal}</h3>
-
-      </div>
+        <div className="account-bal">
+          <h4>SAVINGS ACCOUNT</h4>
+          <h4>0027856679</h4>
+          <button id="balance" 
+            onClick={handleBalanceClick}
+          >{isOn ? "Show Bal." : "Hide Bal."}
+          </button>
+          <h3 className={accountBal}>$ {totalBal}</h3>
+        </div>
 
       <FilterTransaction  newChange={newChange}
       setNewChange={setNewChange}
