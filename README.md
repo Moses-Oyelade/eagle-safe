@@ -1,4 +1,4 @@
-# (Calculator web)
+# (Eagle-Kolo)
 #### Date, 2023/09/20
 #### By *Moses O. Oyelade*
 ## Description
